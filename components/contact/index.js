@@ -37,13 +37,13 @@ const ContactWithMap = () => (
         <Box mt={30}>
           <Flex alignItems="center">
             <Box mr='10px'>{I.phone()}</Box>
-            <StyledLink color="#005a87" href="tel:+38 (067) 676 06 04">
+            <StyledLink color="#005a87" href="tel:+380676760604">
               +38 (067) 676 06 04
             </StyledLink>
           </Flex>
           <Flex mt={15} alignItems="center">
             <Box mr='10px'>{I.phone()}</Box>
-            <StyledLink href="tel:+38 (063) 676 06 04" color="#005a87">
+            <StyledLink href="tel:+380636760604" color="#005a87">
               +38 (063) 676 06 04
             </StyledLink>
           </Flex>
