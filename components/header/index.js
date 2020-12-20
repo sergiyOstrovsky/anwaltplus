@@ -16,6 +16,7 @@ const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) 
         width={100}
         height={100}
         src="/logo.svg"
+        cursor="pointer"
         onClick={handleGoToHomePage}
       />
       <Flex>
