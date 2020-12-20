@@ -9,7 +9,10 @@ import { Box, Img, Flex, Text, H1, H2, H3, Article, Section, Grid, BoxHovered } 
 
 const Home = ({ router }) => (
   <Layout title="home" router={router}>
-    <Img src="/buildings.jpg" width="100%" height="70vh" />
+    <Img
+      width="100%"
+      height="70vh"
+      src="/buildings.jpg" />
     <Section my={50} mx="auto" maxWidth="1200px" px="1rem">
       <Flex alignItems="center">
         <Article lineHeight={1.6} height="max-content">
@@ -31,7 +34,7 @@ const Home = ({ router }) => (
             Ми глибоко вникаємо в суть справи кожного клієнта, щоб знайти найбільш ефективні рішення, що якнайкраще працюватимуть на їхню репутацію. Саме в цьому ми бачимо роль та обов’язок перед кожним клієнтом. Інтереси клієнта – наш головний пріоритет!
           </Text>
         </Article>
-        <Img width="33%" ml="5.5rem" height="auto" src="/flag.png" />
+        <Img width="33%" ml="5.5rem" height="auto" src="/flag.png" display={['none', 'block', 'block']} />
       </Flex>
     </Section>
     <Section py={50} px="1rem" background="#f7f7f7">

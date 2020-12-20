@@ -54,6 +54,17 @@ export const Box = styled.div`
   text-transform: ${({ textTransform }) => textTransform};
 `;
 
+export const Menu = styled.aside`
+  ${width}
+  top: 0;
+  right: 0;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  background: #413189;
+  transition: width 0.5s ease;
+`;
+
 export const BoxHovered = styled(Box)`
   & :hover {
     color: ${({ hoverColor }) => hoverColor};
@@ -83,6 +94,7 @@ export const Img = styled.img`
   ${space}
   ${width}
   ${height}
+  ${display}
   ${maxWidth}
   ${maxHeight}
 
