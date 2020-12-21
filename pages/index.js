@@ -56,7 +56,7 @@ const Home = ({ router }) => (
       >
         {
           services.map(({ title, query }, index) => (
-            <Link passHref key={index} href={query != null ? `/послуги/${query}` : '/#'}>
+            <Link passHref key={index} href={query != null ? `/services/${query}` : '/#'}>
               <a>
                 <BoxHovered
                   p={20}
