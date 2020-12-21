@@ -26,7 +26,11 @@ const Layout = ({ title, router, loading, children }) => {
       {children}
       <ContactWithMap />
       <FooterComponent />
-      <MenuComponent router={router} width={isMenuOpened ? '280px': '0px'} setIsOpenedMenu={setIsOpenedMenu} />
+      <MenuComponent
+        isMenuOpened={isMenuOpened}
+        setIsOpenedMenu={setIsOpenedMenu}
+        width={isMenuOpened ? '280px': '0px'}
+      />
     </PageWrapper>
   );
 };

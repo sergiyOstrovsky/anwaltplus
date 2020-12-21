@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 // data
 import { services } from '../data';
 // components
@@ -8,10 +9,10 @@ import { Box, Img, Flex, Text, H1, H2, H3, Article, Section, Grid, BoxHovered } 
 // //////////////////////////////////////////////////
 
 const Home = ({ router }) => (
-  <Layout title="home" router={router}>
+  <Layout title="Головна" router={router}>
     <Img
       width="100%"
-      height="70vh"
+      height="calc(100vh - 122px)"
       src="/buildings.jpg" />
     <Section my={50} mx="auto" maxWidth="1200px" px="1rem">
       <Flex alignItems="center">
@@ -55,27 +56,29 @@ const Home = ({ router }) => (
       >
         {
           services.map(({ title, query }, index) => (
-            <BoxHovered
-              p={20}
-              key={index}
-              color="#413189"
-              cursor="pointer"
-              hoverColor="white"
-              background="white"
-              borderRadius="4px"
-              hoverBackground="#413189"
-              onClick={() => query != null && router.push(`/services/${query}`)}
-            >
-              <Text fontSize="2.25rem" textAlign="center">
-                §
-              </Text>
-              <H3 my={20} fontWeight="bold" textAlign="center" fontSize="1.17em">
-                {title}
-              </H3>
-              <Text textAlign="center" fontSize=".875rem">
-                Докладніше
-              </Text>
-            </BoxHovered>
+            <Link passHref key={index} href={query != null ? `/послуги/${query}` : '/#'}>
+              <a>
+                <BoxHovered
+                  p={20}
+                  color="#413189"
+                  cursor="pointer"
+                  hoverColor="white"
+                  background="white"
+                  borderRadius="4px"
+                  hoverBackground="#413189"
+                >
+                  <Text fontSize="2.25rem" textAlign="center">
+                    §
+                  </Text>
+                  <H3 my={20} fontWeight="bold" textAlign="center" fontSize="1.17em">
+                    {title}
+                  </H3>
+                  <Text textAlign="center" fontSize=".875rem">
+                    Докладніше
+                  </Text>
+                </BoxHovered>
+              </a>
+            </Link>
           ))
         }
       </Grid>

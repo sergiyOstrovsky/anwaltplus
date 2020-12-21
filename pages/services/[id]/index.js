@@ -1,11 +1,12 @@
 // import Head from 'next/head';
 import * as R from 'ramda';
+import Link from 'next/link';
 // data
 import { services } from '../../../data';
 // components
 import Layout from '../../../components/layout';
 // ui
-import { Section, H2, H3, Article, Box, Flex, Text } from '../../../ui';
+import { Section, H2, H3, Article, Box, Flex, Text, StyledLink } from '../../../ui';
 // //////////////////////////////////////////////////
 
 // const TodoList = () => {
@@ -101,17 +102,18 @@ const Services = ({ router }) => {
           <Box>
             {
               services.map(({ query, title }, index) => (
-                <Box
-                  my=".5rem"
-                  key={index}
-                  color="#413189"
-                  cursor="pointer"
-                  lineHeight={1.5}
-                  textTransform="capitalize"
-                  onClick={() => R.not(R.isNil(query)) && push(`/services/${query}`)}
-                >
-                  {R.toLower(title)}
-                </Box>
+                <Link key={index} href={R.not(R.isNil(query)) ? `/services/${query}` : `/services/${id}`} passHref>
+                  <StyledLink
+                    my=".5rem"
+                    key={index}
+                    color="#413189"
+                    cursor="pointer"
+                    lineHeight={1.5}
+                    textTransform="capitalize"
+                  >
+                    {R.toLower(title)}
+                  </StyledLink>
+                </Link>
               ))
             }
           </Box>

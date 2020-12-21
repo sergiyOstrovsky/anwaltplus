@@ -7,8 +7,8 @@ import * as I from '../icons';
 import { Box, Img, Flex, Text, H1, H2, H3, Article, Section, StyledLink } from '../ui';
 // //////////////////////////////////////////////////
 
-const Home = ({ router }) => (
-  <Layout title="home" router={router}>
+const Contacts = ({ router }) => (
+  <Layout title="Контакти" router={router}>
     <Section my={50} mx="auto" maxWidth="1200px" px="1rem">
       <Flex alignItems="center">
       <Section
@@ -32,6 +32,17 @@ const Home = ({ router }) => (
             м. Львів, вул. Словацького, 1 (приміщення головної пошти)
           </Text>
         </Article>
+        <Article>
+          <H3 mt={30} fontSize="1.17em"  fontWeight="bold" color="#413189">
+            Графік роботи:
+          </H3>
+          <Text mt={20} fontWeight="bold">
+            пн-пт 9:00 – 20:00
+          </Text>
+          <Text mt={20} fontWeight="bold">
+            сб 10:00 – 18:00
+          </Text>
+        </Article>
         <Box mt={30}>
           <Flex alignItems="center">
             <Box mr='10px'>{I.phone()}</Box>
@@ -47,8 +58,8 @@ const Home = ({ router }) => (
           </Flex>
           <Flex mt={15} alignItems="center">
             <Box mr='10px'>{I.mail()}</Box>
-            <StyledLink color="#005a87" href="mailto:some@gmail.com">
-              some@gmail.com
+            <StyledLink color="#005a87" href="mailto:anwaltpl@gmail.com">
+              anwaltpl@gmail.com
             </StyledLink>
           </Flex>
         </Box>
@@ -59,4 +70,4 @@ const Home = ({ router }) => (
   </Layout>
 );
 
-export default Home;
+export default Contacts;

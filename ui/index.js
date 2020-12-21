@@ -118,9 +118,12 @@ export const StyledLink = styled.a`
   ${width}
   ${color}
   ${fontSize}
+  ${borderBottom}
+  ${borderColor}
 
   cursor: pointer;
   display: ${({ display }) => display || 'block'};
+  text-transform: ${({ textTransform }) => textTransform};
 
   &:hover {
     color: ${({ hoverColor }) => hoverColor};

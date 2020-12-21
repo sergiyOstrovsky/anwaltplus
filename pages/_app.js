@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta charSet="utf-8" />
+        <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@300;400;500&display=swap"

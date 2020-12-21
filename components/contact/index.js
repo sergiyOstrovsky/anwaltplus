@@ -34,6 +34,17 @@ const ContactWithMap = () => (
             м. Львів, вул. Словацького, 1 (приміщення головної пошти)
           </Text>
         </Article>
+        <Article>
+          <H3 mt={30} fontSize="1.17em"  fontWeight="bold" color="#413189">
+            Графік роботи:
+          </H3>
+          <Text mt={20} fontWeight="bold">
+            пн-пт 9:00 – 20:00
+          </Text>
+          <Text mt={20} fontWeight="bold">
+            сб 10:00 – 18:00
+          </Text>
+        </Article>
         <Box mt={30}>
           <Flex alignItems="center">
             <Box mr='10px'>{I.phone()}</Box>
@@ -49,12 +60,11 @@ const ContactWithMap = () => (
           </Flex>
           <Flex mt={15} alignItems="center">
             <Box mr='10px'>{I.mail()}</Box>
-            <StyledLink color="#005a87" href="mailto:some@gmail.com">
-              some@gmail.com
+            <StyledLink color="#005a87" href="mailto:anwaltpl@gmail.com">
+              anwaltpl@gmail.com
             </StyledLink>
           </Flex>
         </Box>
-        some
       </Section>
       <StyledLink
         target="_blank"

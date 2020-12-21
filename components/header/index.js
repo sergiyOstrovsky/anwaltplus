@@ -19,7 +19,11 @@ const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) 
         cursor="pointer"
         onClick={handleGoToHomePage}
       />
-      <Flex>
+      <Flex alignItems="center">
+        <Flex height="max-content" fontSize={12} mr={50} display={['none', 'flex', 'flex']}>
+          <Box cursor="pointer" color="#005a87" borderRight="1px solid #ebebeb" pr={10}>УКР</Box>
+          <Box pl={10} cursor='pointer' color="#5d5d5d">EN</Box>
+        </Flex>
         <Box display={['none', 'block', 'block']}>
           <Flex alignItems="center">
             <Box mr={10}>
@@ -47,7 +51,7 @@ const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) 
             onClick={() => setIsOpenedMenu(true)}
           >
             <Box height="max-content" color="#5d5d5d" fontWeight={500}>
-              MENU
+              МЕНЮ
             </Box>
             <Box>
               {I.menu()}
@@ -55,7 +59,7 @@ const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) 
           </Flex>
         }
         {
-          isMenuOpened && <Box ml={50} width={150} />
+          isMenuOpened && <Box ml={50} width={120} />
         }
       </Flex>
     </Flex>
