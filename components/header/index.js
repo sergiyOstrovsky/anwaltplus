@@ -1,7 +1,7 @@
 // icons
 import * as I from '../../icons';
 // ui
-import { Img, Box, Flex, Header, StyledLink } from '../../ui';
+import { Img, Box, Flex, Header, Article, H3, Text, StyledLink } from '../../ui';
 // ///////////////////////////////////////////////////////
 
 const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) => (
@@ -20,10 +20,21 @@ const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) 
         onClick={handleGoToHomePage}
       />
       <Flex alignItems="center">
-        <Flex height="max-content" fontSize={12} mr={50} display={['none', 'flex', 'flex']}>
+        <Flex height="max-content" fontSize={12} mr={[20, 20, 50]} display={['none', 'flex', 'flex']}>
           <Box cursor="pointer" color="#005a87" borderRight="1px solid #ebebeb" pr={10}>УКР</Box>
           <Box pl={10} cursor='pointer' color="#5d5d5d">EN</Box>
         </Flex>
+        <Box mr={[20, 20, 50]} display={['none', 'block', 'block']}>
+          <Text fontSize={12}>
+            Графік роботи:
+          </Text>
+          <Text mt={10} fontSize={12}>
+            пн-пт 9:00 – 20:00
+          </Text>
+          <Text mt={10} fontSize={12}>
+            сб 10:00 – 18:00
+          </Text>
+        </Box>
         <Box display={['none', 'block', 'block']}>
           <Flex alignItems="center">
             <Box mr={10}>
@@ -42,10 +53,10 @@ const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) 
           isMenuOpened === false &&
           <Flex
             p={10}
-            ml={50}
             width={120}
             cursor="pointer"
             alignItems="center"
+            ml={[20, 20, 50]}
             border="1px solid #413189"
             justifyContent="space-between"
             onClick={() => setIsOpenedMenu(true)}
