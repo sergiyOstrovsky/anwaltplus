@@ -20,16 +20,12 @@ const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) 
         onClick={handleGoToHomePage}
       />
       <Flex alignItems="center">
-        <Flex height="max-content" fontSize={12} mr={[20, 20, 50]} display={['none', 'flex', 'flex']}>
-          <Box cursor="pointer" color="#005a87" borderRight="1px solid #ebebeb" pr={10}>УКР</Box>
-          <Box pl={10} cursor='pointer' color="#5d5d5d">EN</Box>
-        </Flex>
         <Box mr={[20, 20, 50]} display={['none', 'block', 'block']}>
           <Text fontSize={12}>
             Графік роботи:
           </Text>
           <Text mt={10} fontSize={12}>
-            пн-пт 9:00 – 20:00
+            пн-пт 8:00 – 20:00
           </Text>
           <Text mt={10} fontSize={12}>
             сб 10:00 – 18:00
@@ -51,22 +47,28 @@ const HeaderComponent = ({ isMenuOpened, setIsOpenedMenu, handleGoToHomePage }) 
         </Box>
         {
           isMenuOpened === false &&
-          <Flex
-            p={10}
-            width={120}
-            cursor="pointer"
-            alignItems="center"
-            ml={[20, 20, 50]}
-            border="1px solid #413189"
-            justifyContent="space-between"
-            onClick={() => setIsOpenedMenu(true)}
-          >
-            <Box height="max-content" color="#5d5d5d" fontWeight={500}>
-              МЕНЮ
-            </Box>
-            <Box>
-              {I.menu()}
-            </Box>
+          <Flex ml={[20, 20, 50]} flexDirection="column" alignItems="center">
+            <Flex height="max-content" fontSize={12}>
+              <Box cursor="pointer" color="#005a87" borderRight="1px solid #ebebeb" pr={10}>УКР</Box>
+              <Box pl={10} cursor='pointer' color="#5d5d5d">EN</Box>
+            </Flex>
+            <Flex
+              p={10}
+              mt={10}
+              width={120}
+              cursor="pointer"
+              alignItems="center"
+              border="1px solid #413189"
+              justifyContent="space-between"
+              onClick={() => setIsOpenedMenu(true)}
+            >
+              <Box height="max-content" color="#5d5d5d" fontWeight={500}>
+                МЕНЮ
+              </Box>
+              <Box>
+                {I.menu()}
+              </Box>
+            </Flex>
           </Flex>
         }
         {

@@ -39,7 +39,7 @@ const ContactWithMap = () => (
             Графік роботи:
           </H3>
           <Text mt={20} fontWeight="bold">
-            пн-пт 9:00 – 20:00
+            пн-пт 8:00 – 20:00
           </Text>
           <Text mt={20} fontWeight="bold">
             сб 10:00 – 18:00
